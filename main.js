@@ -82,6 +82,14 @@ const capitalize = (function (str) {
   return str.toUpperCase()
 })
 
-capitalize('osote')
+capitalize('luis miguel')
 
+const capitalizar = (function (str) {
+  return str.toUpperCase()
+})
 
+capitalizar('luis miguel')
+
+(function (str) {
+  return str.toUpperCase()
+})('luis miguel')
