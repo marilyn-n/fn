@@ -36,53 +36,99 @@ const catSays = animalSound(firstPet)
 
 
 const firstPetPornstarName = (animal) => animal.pornstarName 
-console.log(firstPetPornstarName(firstPet))
 
 const petInfo = (animal) => `${animal.name} address is ${animal.address} - ${animal.postCode}`
-console.log(petInfo(fifthPet))
 
 const hasOwner = (animal) => ` Does ${animal.name} has owner? ${animal.owner}`
-console.log(hasOwner(secondPet))
 
 const isAlive = (item) => `${item.pornstarName} is still alive? ${item.alive}`
-console.log(isAlive(thirdPet))
 
 const eats = (element) => `${element.name} type ${element.type} eats ${element.food}`
-console.log(eats(fourthPet))
 
 const nameLength = (animal) => `${animal.name} length name is ${animal.name.length}`
-console.log(nameLength(firstPet))
 
 const whereIsIt = (item) => `${item.name} is alive and lives in ${item.address}. With its owner? ${item.owner}`
-console.log(whereIsIt(secondPet))
 
 const typeOfAnimal = (item) => `${item.name} is a ${item.type}`
-console.log(typeOfAnimal(fourthPet))
 
 const contactEmail = (element) => `${element.name} contact email is ${element.email}`
-console.log(contactEmail(firstPet))
 
 const animalHobby = (animal) => `${animal.name}'s hobby is ${animal.hobby} `
-console.log(animalHobby(secondPet))
 
 const boringPet = (animal) => `${animal.name} has a hobby? ${animal.hobby}. Does it make any sound? ${animal.sound} `
-console.log(boringPet(fifthPet))
 
 const capitalizeName = (animal) => `${animal.name.toUpperCase()}`
-console.log(capitalizeName(thirdPet))
 
 const splitPornstarName = (item) => `${item.name.split('')}`
-console.log(splitPornstarName(secondPet))
 
 const animalAndSound = item => (`${item.name + item.sound }`)
-console.log(animalAndSound(firstPet))
 
 const splitEmail = item => (`${item.email.split('')}`)
-console.log(splitEmail(fourthPet))
 
-// Write 15 three (or more) lines body assigned ES6 FARTs, which have no return statement
+// Write 10 ES6 FARTs (three (or more) lines body assigned, which have no return statement)
 
-// Write 15 three (or more) lines body assigned ES6 FARTs, which have return statement
+const animalInfo = (animal) => {
+  const personalInfo = animal.name + animal.type
+  const contact = animal.email + animal.address + animal.postCode
+  const result = personalInfo + contact
+}
+
+const reverseAnimalNames = (animal) => {
+  const splitName = animal.name.split()
+  const reverseName = splitName.reverse()
+  const result = reverseName.join(' ')
+}
+
+const capitalize = (item) => {
+  const str = item.hobby
+  const capitalizeStr = str.toUpperCase()
+  const result = `${item.name} likes ${capitalizeStr}`
+}
+
+const toUpperCase = (item) => {
+  const lowerStr = item.hobby.split(' ')
+  const upperStr = lowerStr.map(element => element.charAt(0).toUpperCase())
+  console.log(upperStr)
+}
+
+const dashedPostCode = (item) => {
+  const postCode = item.postCode.split('')
+  const result = postCode.join('-')
+}
+
+const objKeys = (animal) => {
+  const keys = Object.keys(animal)
+  const result = keys.join(', ')
+}
+
+const withOwner = (animal) => {
+  if (animal.owner === true) {
+    console.log(`${animal.name} has owner!`)
+  } else {
+    console.log(`${animal.name} doesnt have owner :-( )`)
+  }
+}
+
+const lostOrDead = (animal) => {
+  if (animal.lost === true) {
+    console.log(`${animal.name} - ${animal.type} is lost - WANTED -`)
+  } else if (animal.alive != true){
+    console.log(`${animal.name} is dead - RIP -`)
+  }
+}
+
+const sortName = (element) => {
+  const name = element.name.split('')
+  const sort = name.sort()
+}
+
+
+const toNumber = (item) => {
+  const result = parseInt(item.postCode)
+  console.log(result)
+}
+
+// Write 15 ES6 FARTs (three (or more) lines body assigned , which have return statement)
 
 // Write the same 45 functions above as ES5 assigned functions (append 'Es5' to the token name)
 
@@ -94,6 +140,4 @@ console.log(splitEmail(fourthPet))
 
 // Execute (call) all of the functions with the example objects as parameters.
 // In comments below each, show how the compiler substitutes token names with their stored values.
-
-
 // Write the functions anonymously (WITH NO ASSIGNED TOKEN) in all these styles. EXECUTE all of the anonymous functions immediately.
