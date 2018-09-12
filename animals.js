@@ -4,7 +4,7 @@ const firstPet = {
   sound: 'meow',
   owner: true,
   food: 'wyskas',
-  hobby: 'drinking watter from the toilet',
+  hobby: 'drinking water from the toilet',
   email: 'misha@hotmail.com.mx',
   pornstarName: 'Michos',
   address: 'Ahuatla #60 Las cruces',

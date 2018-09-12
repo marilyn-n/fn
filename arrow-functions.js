@@ -35,7 +35,7 @@ const catSays = animalSound(firstPet)
 // Write 15 ES6 FARTs (one line body assigned)  
 
 
-const firstPetPornstarName = (animal) => animal.pornstarName 
+const pornstarName = (animal) => animal.pornstarName 
 
 const petInfo = (animal) => `${animal.name} address is ${animal.address} - ${animal.postCode}`
 
@@ -53,17 +53,17 @@ const typeOfAnimal = (item) => `${item.name} is a ${item.type}`
 
 const contactEmail = (element) => `${element.name} contact email is ${element.email}`
 
-const animalHobby = (animal) => `${animal.name}'s hobby is ${animal.hobby} `
+const animalHobby = (animal) => `${animal.name}'s hobby is ${animal.hobby}`
 
-const boringPet = (animal) => `${animal.name} has a hobby? ${animal.hobby}. Does it make any sound? ${animal.sound} `
+const boringPet = (animal) => `${animal.name} has a hobby? ${animal.hobby}. Does it make any sound? ${animal.sound}`
 
 const capitalizeName = (animal) => `${animal.name.toUpperCase()}`
 
 const splitPornstarName = (item) => `${item.name.split('')}`
 
-const animalAndSound = item => (`${item.name + item.sound }`)
+const animalAndSound = item => `${item.name + item.sound }`
 
-const splitEmail = item => (`${item.email.split('')}`)
+const splitEmail = item => `${item.email.split('')}`
 
 // Write 10 ES6 FARTs (three (or more) lines body assigned, which have no return statement)
 
@@ -86,10 +86,11 @@ const capitalize = (item) => {
 }
 
 const toUpperCase = (item) => {
-  const lowerStr = item.hobby.split(' ')
-  const upperStr = lowerStr.map(element => element.charAt(0).toUpperCase())
-  console.log(upperStr)
+  const splitStr = item.hobby.split(' ')
+  const upperStr = splitStr.map(word => word.charAt(0).toUpperCase() + word.substring(1))
+  console.log(upperStr.join(' '))
 }
+console.log(toUpperCase(firstPet))
 
 const dashedPostCode = (item) => {
   const postCode = item.postCode.split('')
@@ -128,16 +129,71 @@ const toNumber = (item) => {
   console.log(result)
 }
 
-// Write 15 ES6 FARTs (three (or more) lines body assigned , which have return statement)
+// Write 10 ES6 FARTs (three (or more) lines body assigned , which have return statement)
+const animalInfoR = (animal) => {
+  const personalInfo = animal.name + animal.type
+  const contact = animal.email + animal.address + animal.postCode
+  const result = personalInfo + contact
+  return result
+}
 
-// Write the same 45 functions above as ES5 assigned functions (append 'Es5' to the token name)
+const reverseAnimalNamesR = (animal) => {
+  const splitName = animal.name.split()
+  const reverseName = splitName.reverse()
+  const result = reverseName.join(' ')
+  return result
+}
 
-// Write the same functions as concise ES5 object method functions (append 'Es5Concise' to the token name)
+const capitalizeR = (item) => {
+  const str = item.hobby
+  const capitalizeStr = str.toUpperCase()
+  const result = `${item.name} likes ${capitalizeStr}`
+  return result
+}
 
-// Write the same functions as ES6 object method functions (append 'Es6Method' to the token name)
+const toUpperCaseR = (item) => {
+  const lowerStr = item.hobby.split(' ')
+  const upperStr = lowerStr.map(element => element.charAt(0).toUpperCase())
+  return upperStr
+}
 
-//  Write the same functions as concise ES6 object method functions (append 'Es6ConciseMethod' to the token name)
+const dashedPostCodeR = (item) => {
+  const postCode = item.postCode.split('')
+  const result = postCode.join('-')
+  return result
+}
 
-// Execute (call) all of the functions with the example objects as parameters.
-// In comments below each, show how the compiler substitutes token names with their stored values.
-// Write the functions anonymously (WITH NO ASSIGNED TOKEN) in all these styles. EXECUTE all of the anonymous functions immediately.
+const objKeysR = (animal) => {
+  const keys = Object.keys(animal)
+  const result = keys.join(', ')
+  return result
+}
+
+const withOwnerR = (animal) => {
+  if (animal.owner === true) {
+    return `${animal.name} has owner!`
+  } else {
+    return `${animal.name} doesnt have owner :-( )`
+  }
+}
+
+const lostOrDeadR = (animal) => {
+  if (animal.lost === true) {
+    return `${animal.name} - ${animal.type} is lost - WANTED -`
+  } else if (animal.alive != true){
+    return `${animal.name} is dead - RIP -`
+  }
+}
+
+const sortNameR = (element) => {
+  const name = element.name.split('')
+  const sortedName = name.sort()
+  return sortedName
+}
+
+
+const toNumberR = (item) => {
+  const result = parseInt(item.postCode)
+  console.log(result)
+  return result
+}
