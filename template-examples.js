@@ -1,5 +1,6 @@
 // ES6 arrow function
 const greeting = name => `Hello ${name}`
+
 greeting('Maria')
 // (name => `Hello ${name}`)('Maria')
 // ('Maria' => `Hello ${'Maria'}`)
